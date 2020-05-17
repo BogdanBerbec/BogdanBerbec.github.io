@@ -1,0 +1,64 @@
+.hamburger {
+    background-image: url('img/menu.png');
+    background-size: cover;
+    height: 3em;
+    width: 3em;
+    cursor: pointer;
+}
+.menu {
+    display: block; /*pentru MOBILE*/
+    user-select: none;
+    position: absolute; /*pentru MOBILE*/
+    top: -10em; /*pentru MOBILE*/
+    left: 0; /*pentru MOBILE*/
+    width: 100%; /*pentru MOBILE*/
+    background-color: white; /*pentru MOBILE*/
+    opacity: 0.9; /*pentru MOBILE*/
+    padding-bottom: 0.5em; /*pentru MOBILE*/
+    transition-duration: 0.5s; /*pentru MOBILE*/
+}
+.menu.visible { /*pentru MOBILE*/
+    top: 4.5em; /*pentru MOBILE*/
+
+}
+.menu ul {
+    display: flex;
+    flex-direction: column; /*pentru MOBILE*/
+    align-items: center;
+    justify-content: center;
+}
+.menu li {
+    display: block;
+    text-transform: uppercase;
+    font-family: 'Alegreya';
+    font-size: 1.4em;
+    font-weight: bold;
+    padding-left: 1em;
+}
+.menu li a {
+    text-decoration: none;
+    color: black;
+}
+
+@media only screen and (min-width: 768px) { /*breakpoint*/
+    .hamburger {
+        display: none;
+    }
+    .menu {
+        position: static;
+        opacity: 1;
+        width: initial;
+        background-color: none;
+    }
+    .menu ul {
+        flex-direction: row;
+    }
+    .menu li a::after {
+        content: '\2022';
+        padding-left: 1em;
+        color: var(--blue-color);
+    }
+    .menu li:last-child a::after {
+        content: '';
+    }
+}
