@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+section {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input {
+    padding: 1em;
+    font-size: 1.5em;
+    border: 0.1em solid orange;
+    border-radius: 0.3em;
+    position: relative;
+    bottom: 1.2em;
+}
+button {
+    padding: 0.5em;
+    font-size: 1.5em;
+    background-color: blueviolet;
+    border: none;
+    color: white;
+    border-radius: 0.3em;
+}
+button#search {
+    /* position: absolute;
+    top: 9em;
+    left: initial; */
+    position: relative;
+    top: 0.5em;
+}
+button:last-child {
+    position: relative;
+    top: 2em;
+}
+#lyrics {
+    font-size: 1.4em;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    top: 1.5em;
+    text-align: center;
+}

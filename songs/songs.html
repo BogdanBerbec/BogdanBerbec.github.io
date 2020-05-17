@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="songs.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
+    <script src="songs.js" defer></script>
+</head>
+<body>
+    <section id="app">
+        <div>
+            <input type="text" v-model="artist" id="artist" placeholder="Artist...">
+            <input type="text" v-model="title" id="title" placeholder="Title of the song...">
+        </div>
+        <button v-on:click="mounted()" id="search">Search</button>
+        <div id="lyrics">
+            {{ fact }}
+        </div>
+        <button v-on:click="refresh()">Refresh</button>
+    </section>
+</body>
+</html>
